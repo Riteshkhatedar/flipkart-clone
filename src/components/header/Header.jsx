@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
 
-    /* toggle Menu start from here */
+    /* Header start from here */
     <div className="bg-white z-50 md:mx-40 shadow-sm fixed top-0 left-0 right-0 flex items-center justify-between p-5 ">
       <div className="image">
         <img

@@ -25,7 +25,7 @@ const Header = () => {
   return (
 
     /* Header start from here */
-    <div className="bg-white z-50 md:mx-40 shadow-sm fixed top-0 left-0 right-0 flex items-center justify-between p-5 ">
+    <div className="bg-white z-50 md:mx-20 lg:mx-40 shadow-sm fixed top-0 left-0 right-0 flex items-center justify-between p-5 ">
       <div className="image">
         <img
           src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg"
@@ -66,20 +66,20 @@ const Header = () => {
             : " duration-500 fixed left-[-100%] bottom-0 top-0"
         }
       >
-        <li className="text-white bg-blue-500 p-4 flex items-center"><div className="image w-10"  ><img className="rounded-3xl w-[100%]" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-3k5V6PJM89IHsgss16z-20sj4TrBkAE0fw&s" alt="" /></div><span>Login & Signup</span></li>
-        <li className="flex items-center p-4 "><span><AiFillThunderbolt/></span>SuperCoin Zone</li>
-        <li className="flex items-center p-4 border-b border-gray-400"><span><FaPlus/></span>Flipkart Plus Zone</li>
-        <li className="flex items-center p-4 "><span><RiMicrosoftFill/></span>All Categories</li>
-        <li className="flex items-center p-4 border-b border-gray-400">More on Flipkart</li>
-        <li className="flex items-center p-4 border-b border-gray-400"><span><GrLanguage/></span>Choose Language</li>
-        <li className="flex items-center p-4 "><span><BiSolidCoupon/></span>Offer Zone</li>
-        <li className="flex items-center p-4 border-b border-gray-400"><span><PiBagSimpleFill/></span>Sell on Flipkart</li>
-        <li className="flex items-center p-4 "><span><ImFolderUpload/></span>My Orders</li>
-        <li className="flex items-center p-4 "><span><BiSolidCoupon/></span> Coupons</li>
-        <li className="flex items-center p-4 "><span><IoCartOutline/></span>My Cart</li>
-        <li className="flex items-center p-4 "><span><FaHeart/></span>My Whishlist</li>
-        <li className="flex items-center p-4 "><span><FaUserLarge/></span>My Account</li>
-        <li className="flex items-center p-4 border-b border-gray-400 "><span><IoMdNotifications/></span>My Notifications</li>
+        <li className="text-white bg-blue-500 p-4 flex items-center"><div className="image w-10 mr-2"  ><img className="rounded-3xl w-[100%]" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-3k5V6PJM89IHsgss16z-20sj4TrBkAE0fw&s" alt="" /></div><span>Login & Signup</span></li>
+        <li className="flex items-center p-4 "><span className="mr-2"><AiFillThunderbolt/></span>SuperCoin Zone</li>
+        <li className="flex items-center p-4 border-b border-gray-400"><span className="mr-2"><FaPlus/></span>Flipkart Plus Zone</li>
+        <li className="flex items-center p-4 "><span className="mr-2"><RiMicrosoftFill/></span>All Categories</li>
+        <li className="flex items-center p-4 border-b border-gray-400"><span className="mr-2 p-1 rounded-2xl bg-slate-500 text-white text-[10px]"><RiMicrosoftFill/></span>More on Flipkart</li>
+        <li className="flex items-center p-4 border-b border-gray-400"><span className="mr-2"><GrLanguage/></span>Choose Language</li>
+        <li className="flex items-center p-4 "><span className="pr-2"><BiSolidCoupon/></span>Offer Zone</li>
+        <li className="flex items-center p-4 border-b border-gray-400"><span className="mr-2"><PiBagSimpleFill/></span>Sell on Flipkart</li>
+        <li className="flex items-center p-4 "><span className="mr-2"><ImFolderUpload/></span>My Orders</li>
+        <li className="flex items-center p-4 "><span className="mr-2"><BiSolidCoupon/></span> Coupons</li>
+        <li className="flex items-center p-4 "><span className="mr-2"><IoCartOutline/></span>My Cart</li>
+        <li className="flex items-center p-4 "><span className="mr-2"><FaHeart/></span>My Whishlist</li>
+        <li className="flex items-center p-4 "><span className="mr-2"><FaUserLarge/></span>My Account</li>
+        <li className="flex items-center p-4 border-b border-gray-400 "><span className="mr-2"><IoMdNotifications/></span>My Notifications</li>
       </ul>
 
 

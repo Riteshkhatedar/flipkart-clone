@@ -6,7 +6,7 @@ import { FaRegCopyright } from "react-icons/fa6";
 const Footer = () => {
   return (
     <>
-      <div className="bg-slate-950 invisible md:visible">
+      <div className="bg-slate-950 hidden md:block">
         <div className="flex items-center justify-between mx-40 py-10 ">
           <ul className="text-white">
             <li>

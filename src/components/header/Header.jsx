@@ -4,6 +4,16 @@ import { LuSearch } from "react-icons/lu";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { IoMdNotifications } from "react-icons/io";
+import { FaHeart } from "react-icons/fa";
+import { FaUserLarge } from "react-icons/fa6";
+import { BiSolidCoupon } from "react-icons/bi";
+import { ImFolderUpload } from "react-icons/im";
+import { PiBagSimpleFill } from "react-icons/pi";
+import { GrLanguage } from "react-icons/gr";
+import { RiMicrosoftFill } from "react-icons/ri";
+import { AiFillThunderbolt } from "react-icons/ai";
+import { FaPlus } from "react-icons/fa";
 
 const Header = () => {
   const [nav, setNav] = useState(false);
@@ -52,24 +62,24 @@ const Header = () => {
       <ul
         className={
           nav
-            ? "fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-white shadow-sm ease-in-out duration-500 text-slate-500"
+            ? "fixed left-0 top-0 w-[60%] h-full border-r bg-white shadow-sm ease-in-out duration-500 text-slate-500"
             : " duration-500 fixed left-[-100%] bottom-0 top-0"
         }
       >
         <li className="text-white bg-blue-500 p-4 flex items-center"><div className="image w-10"  ><img className="rounded-3xl w-[100%]" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-3k5V6PJM89IHsgss16z-20sj4TrBkAE0fw&s" alt="" /></div><span>Login & Signup</span></li>
-        <li className="p-4 ">Super Zone</li>
-        <li className="p-4 border-b border-gray-400">Company</li>
-        <li className="p-4 ">Super Zone</li>
-        <li className="p-4 border-b border-gray-400">Company</li>
-        <li className="p-4 border-b border-gray-400">About</li>
-        <li className="p-4 ">Super Zone</li>
-        <li className="p-4 border-b border-gray-400">Company</li>
-        <li className="p-4 ">My Orders</li>
-        <li className="p-4 ">Coupons</li>
-        <li className="p-4 ">My Cart</li>
-        <li className="p-4 ">My Whishlist</li>
-        <li className="p-4 ">My Account</li>
-        <li className="p-4 border-b border-gray-400 ">My Notifications</li>
+        <li className="flex items-center p-4 "><span><AiFillThunderbolt/></span>SuperCoin Zone</li>
+        <li className="flex items-center p-4 border-b border-gray-400"><span><FaPlus/></span>Flipkart Plus Zone</li>
+        <li className="flex items-center p-4 "><span><RiMicrosoftFill/></span>All Categories</li>
+        <li className="flex items-center p-4 border-b border-gray-400">More on Flipkart</li>
+        <li className="flex items-center p-4 border-b border-gray-400"><span><GrLanguage/></span>Choose Language</li>
+        <li className="flex items-center p-4 "><span><BiSolidCoupon/></span>Offer Zone</li>
+        <li className="flex items-center p-4 border-b border-gray-400"><span><PiBagSimpleFill/></span>Sell on Flipkart</li>
+        <li className="flex items-center p-4 "><span><ImFolderUpload/></span>My Orders</li>
+        <li className="flex items-center p-4 "><span><BiSolidCoupon/></span> Coupons</li>
+        <li className="flex items-center p-4 "><span><IoCartOutline/></span>My Cart</li>
+        <li className="flex items-center p-4 "><span><FaHeart/></span>My Whishlist</li>
+        <li className="flex items-center p-4 "><span><FaUserLarge/></span>My Account</li>
+        <li className="flex items-center p-4 border-b border-gray-400 "><span><IoMdNotifications/></span>My Notifications</li>
       </ul>
 
 

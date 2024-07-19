@@ -3,7 +3,7 @@ import { IoCartOutline } from "react-icons/io5";
 import { LuSearch } from "react-icons/lu";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { AiFillShop, AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { IoMdNotifications } from "react-icons/io";
 import { FaHeart } from "react-icons/fa";
 import { FaUserLarge } from "react-icons/fa6";
@@ -14,7 +14,6 @@ import { GrLanguage } from "react-icons/gr";
 import { RiMicrosoftFill } from "react-icons/ri";
 import { AiFillThunderbolt } from "react-icons/ai";
 import { FaPlus } from "react-icons/fa";
-
 const Header = () => {
   const [nav, setNav] = useState(false);
 
@@ -23,7 +22,6 @@ const Header = () => {
   };
 
   return (
-
     /* Header start from here */
     <div className="bg-white z-50 md:mx-20 lg:mx-40 shadow-sm fixed top-0 left-0 right-0 flex items-center justify-between p-5 ">
       <div className="image">
@@ -32,7 +30,7 @@ const Header = () => {
           alt=""
         />
       </div>
-      <div className="search hidden lg:flex items-center ">
+      <div className="search hidden lg:flex items-center w-[65%] ">
         <button className="bg-slate-100 text-slate-700 rounded-l-lg p-3">
           {" "}
           <LuSearch></LuSearch>
@@ -45,20 +43,33 @@ const Header = () => {
         />
       </div>
 
-      <span className="hidden lg:flex items-center ">
-        <FaRegUserCircle></FaRegUserCircle>
+      <div className="hidden lg:flex items-center justify-between">
+        <div className="flex items-center mr-4">
+          <span className="mr-2">
+            <FaRegUserCircle></FaRegUserCircle>
+          </span>
         Login
-      </span>
-      <NavLink to={"/cart"} className={"hidden lg:flex"}>
-        <span className="flex items-center">
-          <IoCartOutline></IoCartOutline>Cart
-        </span>{" "}
-      </NavLink>
+        </div>
+        <NavLink to={"/cart"} className={" flex items-center mr-4"}>
+          <span className="mr-2">
+            <IoCartOutline></IoCartOutline>
+          </span>{" "}
+          Cart
+        </NavLink>
+        <NavLink className={" flex items-center"}>
+          <span className="mr-2">
+            <AiFillShop />
+          </span>{" "}
+          Become a seller
+        </NavLink>
+      </div>
+
+      {/* Hamberger menu */}
       <div onClick={handleNav} className="block lg:hidden">
         {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
       </div>
 
-{/* toggle Menu start from here */}
+      {/* toggle Menu start from here */}
       <ul
         className={
           nav
@@ -66,23 +77,95 @@ const Header = () => {
             : " duration-500 fixed left-[-100%] bottom-0 top-0"
         }
       >
-        <li className="text-white bg-blue-500 p-4 flex items-center"><div className="image w-10 mr-2"  ><img className="rounded-3xl w-[100%]" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-3k5V6PJM89IHsgss16z-20sj4TrBkAE0fw&s" alt="" /></div><span>Login & Signup</span></li>
-        <li className="flex items-center p-4 "><span className="mr-2"><AiFillThunderbolt/></span>SuperCoin Zone</li>
-        <li className="flex items-center p-4 border-b border-gray-400"><span className="mr-2"><FaPlus/></span>Flipkart Plus Zone</li>
-        <li className="flex items-center p-4 "><span className="mr-2"><RiMicrosoftFill/></span>All Categories</li>
-        <li className="flex items-center p-4 border-b border-gray-400"><span className="mr-2 p-1 rounded-2xl bg-slate-500 text-white text-[10px]"><RiMicrosoftFill/></span>More on Flipkart</li>
-        <li className="flex items-center p-4 border-b border-gray-400"><span className="mr-2"><GrLanguage/></span>Choose Language</li>
-        <li className="flex items-center p-4 "><span className="pr-2"><BiSolidCoupon/></span>Offer Zone</li>
-        <li className="flex items-center p-4 border-b border-gray-400"><span className="mr-2"><PiBagSimpleFill/></span>Sell on Flipkart</li>
-        <li className="flex items-center p-4 "><span className="mr-2"><ImFolderUpload/></span>My Orders</li>
-        <li className="flex items-center p-4 "><span className="mr-2"><BiSolidCoupon/></span> Coupons</li>
-        <li className="flex items-center p-4 "><span className="mr-2"><IoCartOutline/></span>My Cart</li>
-        <li className="flex items-center p-4 "><span className="mr-2"><FaHeart/></span>My Whishlist</li>
-        <li className="flex items-center p-4 "><span className="mr-2"><FaUserLarge/></span>My Account</li>
-        <li className="flex items-center p-4 border-b border-gray-400 "><span className="mr-2"><IoMdNotifications/></span>My Notifications</li>
+        <li className="text-white bg-blue-500 p-4 flex items-center">
+          <div className="image w-10 mr-2">
+            <img
+              className="rounded-3xl w-[100%]"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-3k5V6PJM89IHsgss16z-20sj4TrBkAE0fw&s"
+              alt=""
+            />
+          </div>
+          <span>Login & Signup</span>
+        </li>
+        <li className="flex items-center p-4 ">
+          <span className="mr-2">
+            <AiFillThunderbolt />
+          </span>
+          SuperCoin Zone
+        </li>
+        <li className="flex items-center p-4 border-b border-gray-400">
+          <span className="mr-2">
+            <FaPlus />
+          </span>
+          Flipkart Plus Zone
+        </li>
+        <li className="flex items-center p-4 ">
+          <span className="mr-2">
+            <RiMicrosoftFill />
+          </span>
+          All Categories
+        </li>
+        <li className="flex items-center p-4 border-b border-gray-400">
+          <span className="mr-2 p-1 rounded-2xl bg-slate-500 text-white text-[10px]">
+            <RiMicrosoftFill />
+          </span>
+          More on Flipkart
+        </li>
+        <li className="flex items-center p-4 border-b border-gray-400">
+          <span className="mr-2">
+            <GrLanguage />
+          </span>
+          Choose Language
+        </li>
+        <li className="flex items-center p-4 ">
+          <span className="pr-2">
+            <BiSolidCoupon />
+          </span>
+          Offer Zone
+        </li>
+        <li className="flex items-center p-4 border-b border-gray-400">
+          <span className="mr-2">
+            <PiBagSimpleFill />
+          </span>
+          Sell on Flipkart
+        </li>
+        <li className="flex items-center p-4 ">
+          <span className="mr-2">
+            <ImFolderUpload />
+          </span>
+          My Orders
+        </li>
+        <li className="flex items-center p-4 ">
+          <span className="mr-2">
+            <BiSolidCoupon />
+          </span>{" "}
+          Coupons
+        </li>
+        <li className="flex items-center p-4 ">
+          <span className="mr-2">
+            <IoCartOutline />
+          </span>
+          My Cart
+        </li>
+        <li className="flex items-center p-4 ">
+          <span className="mr-2">
+            <FaHeart />
+          </span>
+          My Whishlist
+        </li>
+        <li className="flex items-center p-4 ">
+          <span className="mr-2">
+            <FaUserLarge />
+          </span>
+          My Account
+        </li>
+        <li className="flex items-center p-4 border-b border-gray-400 ">
+          <span className="mr-2">
+            <IoMdNotifications />
+          </span>
+          My Notifications
+        </li>
       </ul>
-
-
     </div>
   );
 };
